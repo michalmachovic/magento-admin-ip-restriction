@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+	<config>
+		<modules>
+			<MichalMachovic_IpRestriction>
+				<version>0.0.1</version>
+			</MichalMachovic_IpRestriction>
+		</modules>
+		
+		<global>
+			<events>
+				<admin_user_authenticate_before>
+					<observers>
+						<michalmachovic_iprestriction_model_observer>
+							<type>singleton</type>
+							<class>MichalMachovic_IpRestriction_Model_Observer</class>
+							<method>adminLogin</method>
+						</michalmachovic_iprestriction_model_observer>
+					</observers>
+				</admin_user_authenticate_before>
+			</events>
+		</global>
+	</config>	
